@@ -1,0 +1,92 @@
+
+
+
+
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+            <title>Neil Zhenqiang Gong's Webpage</title>
+            <link rel="stylesheet" title="PM CSS" href="mittal.css" type="text/css">
+                <meta name="google-site-verification" content="PJjpG3rijgDtqroGhZqVsZQNtp_HBJhhAJvNPKAaD9Q" />
+                <!--<meta name="google-site-verification" content="sEN-WBhU3XlP0o6YEEMTBH8-86q-Vs0ELdauKy_El3o" />-->
+                </head>
+	
+    
+    <body bgcolor="white">
+        <center>	
+            <br>
+            <br>
+            
+            <table bgcolor="#FFFFFF" width="60%" border="0" cellpadding="0">
+                <tr>
+                    <td>
+                        
+                        
+                        <table width="80%">
+                            <tbody>
+                                <tr>
+                                    <td><img src="me.jpg" width="180" align="left" border="2" height="200"> </td>
+                                    <td><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neil Zhenqiang Gong</h2> 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ph.D. Candidate<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computer Science Division<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University of California, Berkeley <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Office: 721 Soda Hall<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email: neilz.gong@berkeley.edu<br>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        
+                        
+                        
+                        <hr>
+                        <a href="index.html" style="text-decoration: none">Home</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="publications.html" style="text-decoration: none">Publications</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="teaching.html" style="text-decoration: none">Teaching</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="dataset.html" style="text-decoration: none">Dataset</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="press.html" style="text-decoration: none">Press</a> 
+                        <hr>                       
+                        
+                        
+                                                
+                        <h2>Fake Account Detection</h2>
+                        
+                        Sybil attacks, where attackers register a large number of fake accounts, are a fundamental threat to social systems. For instance, reports from August 2014 showed that 8.5% of Twitter's active users were fake, and it was reported in August 2012 that 9.2% of Facebook users were fake. Previous studies showed that fake accounts leverage their access to millions of benign users to disseminate scams, carry out phishing attacks, distribute malware, and harvest private user data.
+                        
+                        <br>
+                        <br>
+                        I designed SybilBelief to detect fake accounts at scale using the social relationships between users. The intuition is that it is hard for attackers to establish trust relationships between fake accounts and benign users, even though they can manipulate arbitrarily the fake accounts they created. From a machine learning perspective, detecting fake accounts is a binary classification problem with benign and fake as the two classes. Previous work was based on either random walks or community detection in social graphs, and they were one-class classification approaches since they leveraged either known benign accounts or known fake accounts, but not both, to learn their classification models. SybilBelief leverages information about both known benign accounts and known fake accounts, as well as the social connections amongst them and other unlabeled accounts, through a semi-supervised learning approach that is based on pairwise Markov Random Fields and Loopy Belief Propagation. In particular, SybilBelief models a social graph as a pairwise Markov Random Fields, which is a joint probability distribution over the states (i.e., benign or fake) of all accounts; given some known benign and fake accounts, we use Loopy Belief Propagation to infer the posterior probabilities of all other accounts being fake; and we further use the posterior probabilities to classify them. SybilBelief substantially outperforms previous approaches and I am applying it to detect fake accounts in a large-scale Twitter dataset with 21 million nodes and 265 million edges.
+                        
+                        <br>
+                        <h3>Publications</h3>
+                        <ul>
+                            <p><li><A HREF="papers/SybilBelief.pdf">SybilBelief: A Semi-supervised Learning Approach for Structure-based Sybil Detection</A>
+                                <br><b>Neil Zhenqiang Gong</b>, Mario Frank, Prateek Mittal
+                                <br><i>IEEE Transactions on Information Forensics and Security (TIFS), 9(6)</i>, 2014
+                            </li></p>
+                                    
+                        </ul>
+                        
+                                                    
+                        
+                        <h3>Collaborators</h3>
+                        <ul>
+                            <li>Mario Frank (Postdoc at UC Berkeley)</li>
+                            <li>Prateek Mittal (Professor at Princeton University)</li>
+                        </ul>
+                                    
+                                        
+                                    
+                
+                        <br>
+                        <br>
+
+                        
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
+                        
