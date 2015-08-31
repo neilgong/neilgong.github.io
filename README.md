@@ -1,2 +1,0 @@
-# neilgong.github.io
-webpage
